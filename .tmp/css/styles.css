@@ -22106,10 +22106,8 @@ body .font-secondary {
   }
 }
 
-.timeline-body > p,
-.timeline-body > ul {
+.timeline-body {
   padding: 20px;
-  margin-bottom: 0;
 }
 
 @media -sass-debug-info {

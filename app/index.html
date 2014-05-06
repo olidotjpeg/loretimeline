@@ -23,23 +23,24 @@
         <h1 id="timeline">Timeline 2.1</h1>
     </div>
     <ul class="timeline" ng-controller="timelineList">
-        <li ng-repeat="hero in heroes">
+        <li ng-repeat="item in items">
           <div class="timeline-badge primary"><a><i class="fa fa-dot-circle-o" rel="tooltip" title="11 hours ago via Twitter" id=""></i></a></div>
           <div class="timeline-panel">
             <div class="timeline-heading">
-              <img class="img-responsive" src="{{image}}" />
+              <img class="img-responsive" src="{{item.image}}" />
               
             </div>
             <div class="timeline-body">
-                <h2>{{title}}</h2>
-                <p>{{description}}</p>
+                <small>{{item.date}}</small>
+                <h2>{{item.title}}</h2>
+                <p>{{item.description}}</p>
               
             </div>
             
             <div class="timeline-footer">
                 <a><i class="fa fa-thumbs-o-up"></i></a>
                 <a><i class="fa fa-share-square-o"></i></a>
-                <a class="pull-right">{{extLink}}</a>
+                <a class="pull-right">{{item.extLink}}</a>
             </div>
           </div>
         </li>
@@ -72,12 +73,13 @@
 
         <script>
             var timelineList = function($scope) {
-                $scope.heroes = [
+                $scope.items = [
                     {
                         title: "lel",
+                        date: "24/08/08",
                         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, possimus.",
                         extLink: "http://somelinkgoeshere.com",
-                        image: ""
+                        image: "http://placehold.it/1600x500"
                     }
                 ];
             };
